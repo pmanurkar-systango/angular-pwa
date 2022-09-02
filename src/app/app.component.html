@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3 class="componentHeadingCls">Angular Progressive Web Application (PWA)</h3>
+    </div>
+    <div class="col">
+      Network Status:
+      <span class="badge bg-success" *ngIf="isOnline">Online</span>
+      <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
+    </div>
+  </div>
+  <div class="w-100 position-absolute top-0" *ngIf="modalVersion">
+    <div class="alert alert-secondary m-2">
+      A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
+    </div>
+  </div>
+  <div class="btn-group btn-group-sm" role="group" aria-label="...">
+    <button type="button" class="btn btn-outline-dark" routerLink="images-demo" routerLinkActive="active">Images Demo</button>
+    <button type="button" class="btn btn-outline-dark" routerLink="users" routerLinkActive="active">Users</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
