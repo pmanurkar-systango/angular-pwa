@@ -8,6 +8,14 @@ Add the "ng add @angular/pwa" library to set up the Angular service worker.
 
 The files ngsw-config.json, src/manifest.webmanifest and icons were added.
 Files angular.json, package.json, src/app/app.module.ts and src/index.html were changed to the application.
+
+A PWA only runs on https and localhost environment. The Angular CLI is limited because the service worker doesn’t work with the ng serve command. You have to create a build and host it separately, perhaps using http-server
+> To see a PWA in action, follow the below steps.
+> Run ng build --prod command. It will create files under dist/angular-pwa folder.
+> Navigate to that folder using cd dist/angular-pwa
+> Run http-server command (npm i -g http-server)
+> Open
+
 ```
 
 ## Development server
